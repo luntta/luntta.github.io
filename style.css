@@ -7,6 +7,10 @@
 	--font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro,
 		serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	--font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--font-size: 1.6rem;
+	--font-size-small: 1.4rem;
+	--font-size-xsmall: 1.2rem;
+	--grid-template-columns: minmax(1.6rem, 1fr) minmax(auto, 57ch) minmax(1.6rem, 1fr);
 }
 
 @media (prefers-color-scheme: light) {
@@ -40,6 +44,7 @@
 		--text-high-contrast: var(--mauve12);
 		--text-low-contrast: var(--mauve11);
 		--background-color: var(--violet1);
+		--background-color-alpha: hsla(255, 65%, 99.4%, 0.98);
 	}
 }
 
@@ -74,6 +79,7 @@
 		--text-high-contrast: var(--mauve12);
 		--text-low-contrast: var(--mauve11);
 		--background-color: var(--violet1);
+		--background-color-alpha: hsla(250, 20%, 10.2%, 0.98);
 	}
 }
 
@@ -84,14 +90,14 @@
 }
 
 html {
-	font-size: 10px;
+	font-size: 62.5%;
 }
 
 body {
 	font-family: var(--font-sans-serif);
 	background-color: var(--background-color);
 	color: var(--text-high-contrast);
-	font-size: 1.6rem;
+	font-size: var(--font-size);
 	line-height: 1.618;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -103,33 +109,21 @@ body {
 	color: var(--violet11);
 }
 
-.post__header {
-	position: sticky;
-	top: -1px;
-	margin-bottom: 3.2rem;
-	padding: 1.6rem 0;
-}
-
-.post__header.is-sticky {
-	border-bottom: 0.1rem solid var(--mauve6);
-	background-color: var(--background-color);
-}
-
 h1 {
-	font-size: 2rem;
+	font-size: var(--font-size);
 	font-weight: 500;
 	margin: 0;
 }
 
 h2 {
-	font-size: 1.8rem;
+	font-size: var(--font-size);
 	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: 1.6rem;
 }
 
 h3 {
-	font-size: 1.6rem;
+	font-size: var(--font-size);
 	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: 3.2rem;
@@ -158,6 +152,7 @@ a,
 	background-size: 100% 0.2rem;
 	background-position: left bottom;
 	background-repeat: no-repeat;
+	font-weight: 500;
 	text-shadow: 0.1em 0 var(--background-color), -0.1em 0 var(--background-color);
 	text-decoration: none;
 	cursor: pointer;
@@ -174,20 +169,38 @@ a::selection {
 
 .post {
 	color: var(--text-high-contrast);
-	display: grid;
 	padding: 128px 0;
-	grid-template-columns:
-		minmax(1.6rem, 1fr)
-		minmax(auto, 57ch)
-		minmax(1.6rem, 1fr);
 }
 
-.post > * {
+.post__header,
+.post__content {
+	display: grid;
+	grid-template-columns: var(--grid-template-columns);
+}
+
+.post__header > *,
+.post__content > * {
 	grid-column: 2;
 }
 
+.post__header {
+	position: sticky;
+	top: -1px;
+	margin-bottom: 3.2rem;
+	padding: 1.2rem 0;
+	border-top: 0.1rem solid transparent;
+	border-bottom: 0.1rem solid transparent;
+}
+
+.post__header.is-sticky {
+	border-bottom-color: var(--mauve6);
+	background-color: var(--background-color-alpha);
+}
+
 .notelist {
-	margin-top: 2.4rem;
+	margin: 2.4rem 0 0;
+	padding: 0;
+	list-style: none;
 }
 
 .notelist__viewall {
@@ -205,11 +218,13 @@ a::selection {
 
 .note__subtitle {
 	color: var(--text-low-contrast);
-	font-size: 1.4rem;
+	font-size: var(--font-size-small);
+	font-style: italic;
 }
 
-.low-contrast-text {
+.section__subtitle {
 	color: var(--text-low-contrast);
+	margin-top: -1.6rem;
 }
 
 .socials {
@@ -229,7 +244,7 @@ a::selection {
 
 .social__name {
 	color: var(--text-low-contrast);
-	font-size: 1.4rem;
+	font-size: var(--font-size-small);
 }
 
 .social__icon {
@@ -245,17 +260,14 @@ a::selection {
 }
 
 .social__handle {
-	font-size: 1.4rem;
+	font-size: var(--font-size-small);
 }
 
 .site__footer {
 	padding: 1.6rem 0;
 	border-top: 0.1rem solid var(--mauve6);
 	display: grid;
-	grid-template-columns:
-		minmax(1.6rem, 1fr)
-		minmax(auto, 57ch)
-		minmax(1.6rem, 1fr);
+	grid-template-columns: var(--grid-template-columns);
 }
 
 .site__footer > * {
@@ -263,7 +275,7 @@ a::selection {
 }
 
 .footer__content {
-	font-size: 1.4rem;
+	font-size: var(--font-size-small);
 	color: var(--text-low-contrast);
 	display: flex;
 	justify-content: space-between;
@@ -275,4 +287,28 @@ hr {
 	height: 1px;
 	background-color: var(--mauve6);
 	margin: 6.4rem 0;
+}
+
+.pill {
+	font-size: var(--font-size-small);
+	padding: 0.2rem 0.4rem;
+	font-weight: 500;
+	background-color: var(--violet3);
+	color: var(--violet11);
+	border: 0.1rem solid var(--violet7);
+	border-radius: 0.4rem;
+	white-space: nowrap;
+}
+
+.pills {
+	line-height: 1.8;
+}
+
+.pills .pill:where(:not(:last-child)) {
+	margin-right: 0.2rem;
+}
+
+.icon {
+	vertical-align: middle;
+	margin-bottom: 1px;
 }
