@@ -331,7 +331,6 @@ hr {
 
 .pill:nth-child(4n+3) {
 	background: var(--pink);
-	color: var(--white);
 }
 
 .pill:nth-child(4n) {
