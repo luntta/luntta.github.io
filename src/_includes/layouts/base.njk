@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
+		<link rel="stylesheet" href="/assets/lib/normalize/normalize.css" />
+		{%- if carousel %}
+		<link rel="stylesheet" href="/assets/lib/flickity/flickity.css" />
+		{%- endif %}
+		<link rel="stylesheet" href="/assets/css/style.css" />
+	</head>
+	<body>
+		<div class="site">
+			<main class="site__body">
+				<article class="post">
+					{% include "partials/header.njk" %}
+					<div class="post__content">
+						{{ content | safe }}
+					</div>
+				</article>
+			</main>
+			{% include "partials/footer.njk" %}
+		</div>
+		{%- if carousel %}
+		<script src="/assets/lib/flickity/flickity.pkgd.min.js"></script>
+		{%- endif %}
+		<script src="/assets/js/script.js"></script>
+		{%- if carousel %}
+		<script>
+			var elem = document.querySelector('.carousel');
+			var flkty = new Flickity(elem, {
+				cellAlign: 'center',
+				contain: true,
+				wrapAround: true,
+			});
+		</script>
+		{%- endif %}
+	</body>
+</html>

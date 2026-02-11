@@ -1,0 +1,10 @@
+<header class="post__header">
+	{%- if showBackLink %}
+	<div class="site__homelink">
+		<a href="/" title="Back to home">
+			{% include "partials/arrow-icon.njk" %}
+		</a>
+	</div>
+	{%- endif %}
+	<h1>{% if titleHtml %}{{ titleHtml | safe }}{% else %}{{ headerTitle | default(title) }}{% endif %}</h1>
+</header>

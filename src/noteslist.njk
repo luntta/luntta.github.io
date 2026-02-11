@@ -1,0 +1,20 @@
+---
+layout: layouts/page.njk
+title: Notes
+permalink: /notes/
+---
+<p>A growing collection of thoughts and snippets.</p>
+<ul class="notelist">
+	{%- for note in collections.allNotes %}
+	<li class="note">
+		<h3 class="note__title">
+			{%- if note.data.draft %}
+			{{ note.data.title }}
+			{%- else %}
+			<a href="{{ note.url }}">{{ note.data.title }}</a>
+			{%- endif %}
+		</h3>
+		<p class="note__subtitle">{{ note.data.subtitle }}</p>
+	</li>
+	{%- endfor %}
+</ul>
