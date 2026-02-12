@@ -156,7 +156,7 @@ a:hover,
 .post__header {
 	border-bottom: var(--border);
 	background-color: var(--cream);
-	padding: 2.4rem var(--gutter);
+	padding: 2.4rem max(var(--gutter), calc((100% - var(--content-width)) / 2 + var(--gutter)));
 	position: sticky;
 	top: -1px;
 	z-index: 12;
@@ -222,6 +222,7 @@ a:hover,
 }
 
 .note {
+	position: relative;
 	border: var(--border);
 	padding: 2rem 2.4rem;
 	background: var(--white);
@@ -243,6 +244,12 @@ a:hover,
 	text-decoration: none;
 }
 
+.note__title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
 .note__title a:hover {
 	background: var(--yellow);
 }
@@ -261,6 +268,102 @@ a:hover,
 	margin-bottom: 0;
 	font-size: var(--font-size-small);
 	line-height: 1.5;
+}
+
+/* ==========================================================================
+   NOTE META (date & category)
+   ========================================================================== */
+
+.note-meta {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #666;
+	margin-bottom: 3.2rem;
+}
+
+.note-meta__category {
+	background: transparent;
+	border: 1px solid #ccc;
+	padding: 0.2rem 0.8rem;
+	font-weight: 400;
+	color: #666;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+	transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.note-meta__category:hover {
+	background: var(--yellow);
+	border-color: var(--black);
+	color: var(--black);
+}
+
+/* ==========================================================================
+   NOTE NAVIGATION (prev / next)
+   ========================================================================== */
+
+.note-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.6rem;
+	margin-top: 4rem;
+	padding-top: 3.2rem;
+	border-top: var(--border-thin);
+	border-top-style: dashed;
+}
+
+.note-nav__link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	padding: 1.6rem;
+	border: var(--border);
+	background: var(--white);
+	box-shadow: var(--shadow-sm);
+	text-decoration: none;
+	border-bottom: var(--border);
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.note-nav__link:hover {
+	box-shadow: var(--shadow-hover);
+	transform: translate(-3px, -3px);
+	background: var(--white);
+}
+
+.note-nav__link--next {
+	text-align: right;
+	grid-column: 2;
+}
+
+.note-nav__label {
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #666;
+	font-weight: 400;
+}
+
+.note-nav__title {
+	font-weight: 700;
+	font-size: var(--font-size-small);
+}
+
+@media screen and (max-width: 767px) {
+	.note-nav {
+		grid-template-columns: 1fr;
+	}
+
+	.note-nav__link--next {
+		text-align: left;
+		grid-column: 1;
+	}
 }
 
 /* ==========================================================================
@@ -507,10 +610,6 @@ ul {
 	margin-top: 0;
 	margin-bottom: 2rem;
 	padding-left: 2rem;
-}
-
-ul li {
-	margin-bottom: 0.8rem;
 }
 
 ul li::marker {

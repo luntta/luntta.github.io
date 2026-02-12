@@ -20,11 +20,7 @@ title: ""
 		{%- for note in collections.allNotes %}
 		<li class="note">
 			<h3 class="note__title">
-				{%- if note.data.draft %}
-				<a href="#">{{ note.data.title }}</a>
-				{%- else %}
 				<a href="{{ note.url }}">{{ note.data.title }}</a>
-				{%- endif %}
 			</h3>
 			<p class="note__subtitle">{{ note.data.subtitle }}</p>
 		</li>
@@ -32,39 +28,6 @@ title: ""
 	</ul>
 	<a href="/notes/" class="notelist__viewall">
 		View all notes
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="16"
-			height="16"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="3"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="icon icon--arrow-right"
-		>
-			<line x1="5" y1="12" x2="19" y2="12"></line>
-			<polyline points="12 5 19 12 12 19"></polyline>
-		</svg>
-	</a>
-</div>
-<hr>
-<div class="section section--notes">
-	<h2 class="section__title">Featured work</h2>
-	<p>A showcase of some of the projects, products and services I've worked on</p>
-	<ul class="notelist">
-		{%- for project in collections.featuredProjects %}
-		<li class="note">
-			<h3 class="note__title">
-				<a href="{{ project.url }}">{{ project.data.title }}</a>
-			</h3>
-			<p class="note__subtitle">{{ project.data.subtitle }}</p>
-		</li>
-		{%- endfor %}
-	</ul>
-	<a href="/projects/" class="notelist__viewall">
-		Show more
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"

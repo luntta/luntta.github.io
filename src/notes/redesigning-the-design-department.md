@@ -1,6 +1,9 @@
 ---
 title: '"Redesigning the design department"'
 subtitle: Thoughts on the McKinsey report
+categories:
+  - Design
+  - Leadership
 ---
 
 Latest McKinsey report ["Redesigning the design department"](https://www.mckinsey.com/business-functions/mckinsey-design/our-insights/redesigning-the-design-department) was a joy to read and validated a lot of my thoughts about design departments. Couple of key findings:

@@ -1,0 +1,22 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: collections.noteCategories
+  size: 1
+  alias: category
+permalink: /notes/category/{{ category.slug }}/
+eleventyComputed:
+  title: "{{ category.name }}"
+---
+<ul class="notelist">
+	{%- for note in collections.allNotes %}
+	{%- if note.data.categories and category.name in note.data.categories %}
+	<li class="note">
+		<h3 class="note__title">
+			<a href="{{ note.url }}">{{ note.data.title }}</a>
+		</h3>
+		<p class="note__subtitle">{{ note.data.subtitle }}</p>
+	</li>
+	{%- endif %}
+	{%- endfor %}
+</ul>

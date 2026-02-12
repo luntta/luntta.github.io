@@ -8,22 +8,28 @@ module.exports = function (eleventyConfig) {
 		return arr.slice(0, limit);
 	});
 
-	// Collections
-	eleventyConfig.addCollection("projects", function (collectionApi) {
-		return collectionApi.getFilteredByTag("project").sort((a, b) => {
-			return (a.data.order || 999) - (b.data.order || 999);
+	// Date formatting filters
+	eleventyConfig.addFilter("dateFormat", function (date) {
+		return new Date(date).toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
 		});
 	});
 
-	eleventyConfig.addCollection("featuredProjects", function (collectionApi) {
-		return collectionApi
-			.getFilteredByTag("project")
-			.filter((item) => item.data.featured)
-			.sort((a, b) => {
-				return (a.data.order || 999) - (b.data.order || 999);
-			});
+	eleventyConfig.addFilter("isoDate", function (date) {
+		return new Date(date).toISOString().split("T")[0];
 	});
 
+	// Slugify filter
+	eleventyConfig.addFilter("slugify", function (str) {
+		return str
+			.toLowerCase()
+			.replace(/[^\w\s-]/g, "")
+			.replace(/\s+/g, "-");
+	});
+
+	// Collections
 	eleventyConfig.addCollection("notes", function (collectionApi) {
 		return collectionApi
 			.getFilteredByTag("note")
@@ -32,6 +38,20 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection("allNotes", function (collectionApi) {
 		return collectionApi.getFilteredByTag("note");
+	});
+
+	eleventyConfig.addCollection("noteCategories", function (collectionApi) {
+		const categories = new Set();
+		collectionApi.getFilteredByTag("note").forEach((item) => {
+			(item.data.categories || []).forEach((cat) => categories.add(cat));
+		});
+		return [...categories].sort().map((name) => ({
+			name,
+			slug: name
+				.toLowerCase()
+				.replace(/[^\w\s-]/g, "")
+				.replace(/\s+/g, "-"),
+		}));
 	});
 
 	return {
