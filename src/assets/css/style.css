@@ -154,7 +154,6 @@ a:hover,
 }
 
 .post__header {
-	border-bottom: var(--border);
 	background-color: var(--cream);
 	padding: 2.4rem max(var(--gutter), calc((100% - var(--content-width)) / 2 + var(--gutter)));
 	position: sticky;
@@ -563,12 +562,19 @@ img {
 .site__homelink a {
 	display: flex;
 	align-items: center;
-	padding: 0.8rem;
+	padding: 0.8rem 1rem;
 	border: var(--border-thin);
 	background: var(--yellow);
 	box-shadow: var(--shadow-sm);
 	border-bottom: var(--border-thin);
 	transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.site__homelink-brand {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: var(--font-size-small);
+	line-height: 1;
 }
 
 .site__homelink a:hover {

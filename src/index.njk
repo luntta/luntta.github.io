@@ -22,7 +22,7 @@ title: ""
 			<h3 class="note__title">
 				<a href="{{ note.url }}">{{ note.data.title }}</a>
 			</h3>
-			<p class="note__subtitle">{{ note.data.subtitle }}</p>
+			<p class="note__subtitle">{{ note.date | dateFormat }} — {{ note.data.subtitle }}</p>
 		</li>
 		{%- endfor %}
 	</ul>
