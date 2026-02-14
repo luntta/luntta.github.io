@@ -1,12 +1,3 @@
 <footer class="site__footer">
-	<div class="footer__content">
-		<div class="random-thought-or-quote">{{ quotes[0] }}</div>
-	</div>
+	<div class="footer__content">&copy; {% year %} Raine Luntta</div>
 </footer>
-<script>
-	(function() {
-		var quotes = {{ quotes | dump | safe }};
-		var el = document.querySelector('.random-thought-or-quote');
-		if (el) el.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-	})();
-</script>

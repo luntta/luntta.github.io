@@ -29,6 +29,9 @@ module.exports = function (eleventyConfig) {
 			.replace(/\s+/g, "-");
 	});
 
+	// Shortcodes
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
 	// Collections
 	eleventyConfig.addCollection("notes", function (collectionApi) {
 		return collectionApi
