@@ -1,0 +1,675 @@
+/* ==========================================================================
+   NEOBRUTALIST PORTFOLIO — Raine Luntta
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+	--black: #1a1a1a;
+	--white: #fffcf2;
+	--cream: #fffcf2;
+	--yellow: #ffe156;
+	--pink: #ff6b9d;
+	--blue: #4ecdc4;
+	--orange: #ff8a5c;
+	--lavender: #c3b1e1;
+	--red: #ff4757;
+
+	--border: 3px solid var(--black);
+	--border-thin: 2px solid var(--black);
+	--shadow: 5px 5px 0 var(--black);
+	--shadow-sm: 3px 3px 0 var(--black);
+	--shadow-hover: 8px 8px 0 var(--black);
+
+	--font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+	--font-mono: 'Space Mono', 'Menlo', 'Consolas', monospace;
+	--font-size: 1.8rem;
+	--font-size-large: 3.2rem;
+	--font-size-xl: 4.8rem;
+	--font-size-small: 1.6rem;
+	--font-size-xsmall: 1.4rem;
+
+	--content-width: 72ch;
+	--gutter: 2.4rem;
+}
+
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-display);
+	background-color: var(--cream);
+	color: var(--black);
+	font-size: var(--font-size);
+	line-height: 1.6;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+}
+
+::selection {
+	background: var(--yellow);
+	color: var(--black);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1 {
+	font-family: var(--font-display);
+	font-size: var(--font-size-xl);
+	font-weight: 700;
+	line-height: 1.1;
+	margin: 0;
+	letter-spacing: -0.02em;
+}
+
+h2 {
+	font-family: var(--font-display);
+	font-size: var(--font-size-large);
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	letter-spacing: -0.01em;
+}
+
+h3 {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.8rem;
+}
+
+p {
+	margin-top: 0;
+}
+
+p:where(:not(:last-child)) {
+	margin-bottom: 2rem;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+.text-primary {
+	background: var(--yellow);
+	padding: 0 0.4rem;
+	display: inline;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+}
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a,
+.link {
+	color: var(--black);
+	text-decoration: none;
+	font-weight: 600;
+	border-bottom: 2px solid var(--black);
+	padding-bottom: 1px;
+	transition: background-color 0.1s ease;
+	background: none;
+	text-shadow: none;
+}
+
+a:hover,
+.link:hover {
+	background-color: var(--yellow);
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.site {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.site__body {
+	flex: 1;
+}
+
+.post {
+	padding: 0;
+}
+
+.post__header {
+	background-color: var(--cream);
+	padding: 2.4rem max(var(--gutter), calc((100% - var(--content-width)) / 2 + var(--gutter)));
+	position: sticky;
+	top: -1px;
+	z-index: 12;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.post__header.is-sticky {
+	box-shadow: 0 3px 0 var(--black);
+}
+
+.post__header h1 {
+	font-size: var(--font-size-large);
+}
+
+.post__content {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding: 4rem var(--gutter);
+}
+
+/* Hero section on index */
+.section--lead {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+/* ==========================================================================
+   PROJECT CARDS / NOTE LIST
+   ========================================================================== */
+
+.notelist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.notelist__viewall {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin-top: 2.4rem;
+	font-weight: 700;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-small);
+	padding: 1rem 2rem;
+	background: var(--yellow);
+	border: var(--border);
+	box-shadow: var(--shadow-sm);
+	text-decoration: none;
+	border-bottom: var(--border);
+	transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+.notelist__viewall:hover {
+	box-shadow: var(--shadow);
+	transform: translate(-2px, -2px);
+	background: var(--yellow);
+}
+
+.note {
+	position: relative;
+	border: var(--border);
+	padding: 2rem 2.4rem;
+	background: var(--white);
+	box-shadow: var(--shadow-sm);
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.note:hover {
+	box-shadow: var(--shadow-hover);
+	transform: translate(-3px, -3px);
+}
+
+.note__title {
+	margin-bottom: 0.4rem;
+}
+
+.note__title a {
+	border-bottom: 2px solid var(--black);
+	text-decoration: none;
+}
+
+.note__title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.note__title a:hover {
+	background: var(--yellow);
+}
+
+.note__subtitle {
+	color: #666;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	font-style: normal;
+	margin-bottom: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.note__lead {
+	margin-bottom: 0;
+	font-size: var(--font-size-small);
+	line-height: 1.5;
+}
+
+/* ==========================================================================
+   NOTE META (date & category)
+   ========================================================================== */
+
+.note-meta {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #666;
+	margin-bottom: 3.2rem;
+}
+
+.note-meta__category {
+	background: transparent;
+	border: 1px solid #ccc;
+	padding: 0.2rem 0.8rem;
+	font-weight: 400;
+	color: #666;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+	transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.note-meta__category:hover {
+	background: var(--yellow);
+	border-color: var(--black);
+	color: var(--black);
+}
+
+/* ==========================================================================
+   NOTE NAVIGATION (prev / next)
+   ========================================================================== */
+
+.note-nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.6rem;
+	margin-top: 4rem;
+	padding-top: 3.2rem;
+	border-top: var(--border-thin);
+	border-top-style: dashed;
+}
+
+.note-nav__link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	padding: 1.6rem;
+	border: var(--border);
+	background: var(--white);
+	box-shadow: var(--shadow-sm);
+	text-decoration: none;
+	border-bottom: var(--border);
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.note-nav__link:hover {
+	box-shadow: var(--shadow-hover);
+	transform: translate(-3px, -3px);
+	background: var(--white);
+}
+
+.note-nav__link--next {
+	text-align: right;
+	grid-column: 2;
+}
+
+.note-nav__label {
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #666;
+	font-weight: 400;
+}
+
+.note-nav__title {
+	font-weight: 700;
+	font-size: var(--font-size-small);
+}
+
+@media screen and (max-width: 767px) {
+	.note-nav {
+		grid-template-columns: 1fr;
+	}
+
+	.note-nav__link--next {
+		text-align: left;
+		grid-column: 1;
+	}
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+.section {
+	margin-bottom: 2rem;
+}
+
+.section__title {
+	display: inline-block;
+	font-size: 2.4rem;
+	margin-bottom: 1.6rem;
+	padding: 0.2rem 0;
+	border-bottom: 4px solid var(--black);
+}
+
+.section__subtitle {
+	color: #666;
+	margin-top: -1.2rem;
+}
+
+hr {
+	border: none;
+	border-top: var(--border-thin);
+	margin: 3.2rem 0;
+	border-style: dashed;
+}
+
+/* ==========================================================================
+   PILLS / TAGS
+   ========================================================================== */
+
+.pills {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.pill {
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	font-weight: 700;
+	padding: 0.6rem 1.2rem;
+	border: var(--border-thin);
+	background: var(--white);
+	box-shadow: var(--shadow-sm);
+	white-space: nowrap;
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.pill:hover {
+	transform: translate(-2px, -2px);
+	box-shadow: var(--shadow);
+}
+
+.pill:nth-child(4n+1) {
+	background: var(--yellow);
+}
+
+.pill:nth-child(4n+2) {
+	background: var(--blue);
+}
+
+.pill:nth-child(4n+3) {
+	background: var(--pink);
+}
+
+.pill:nth-child(4n) {
+	background: var(--lavender);
+}
+
+/* ==========================================================================
+   SOCIAL LINKS
+   ========================================================================== */
+
+.socials {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.2rem;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.2rem 1.6rem;
+	border: var(--border-thin);
+	background: var(--white);
+	box-shadow: var(--shadow-sm);
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.social:hover {
+	transform: translate(-2px, -2px);
+	box-shadow: var(--shadow);
+}
+
+.social__name {
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xsmall);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	white-space: nowrap;
+}
+
+.social__icon {
+	height: 2rem;
+	width: 2rem;
+	flex-shrink: 0;
+}
+
+.social__icon path {
+	fill: var(--black);
+}
+
+.social__handle {
+	font-size: var(--font-size-small);
+	border-bottom: 2px solid var(--black);
+}
+
+/* Alternating accent colors on social cards */
+.social:nth-child(6n+1) { border-left: 6px solid var(--yellow); }
+.social:nth-child(6n+2) { border-left: 6px solid var(--blue); }
+.social:nth-child(6n+3) { border-left: 6px solid var(--pink); }
+.social:nth-child(6n+4) { border-left: 6px solid var(--orange); }
+.social:nth-child(6n+5) { border-left: 6px solid var(--lavender); }
+.social:nth-child(6n+6) { border-left: 6px solid var(--red); }
+
+/* ==========================================================================
+   IMAGES & FIGURES
+   ========================================================================== */
+
+img {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.post__content figure {
+	margin: 0 0 4rem 0;
+	border: var(--border);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+/* ==========================================================================
+   CAROUSEL
+   ========================================================================== */
+
+.carousel {
+	margin: 0 0 4rem 0;
+}
+
+.carousel__cell {
+	background: var(--white);
+	margin: 0 1.2rem;
+	max-width: 1200px;
+	width: 100%;
+	overflow: hidden;
+	border: var(--border);
+	box-shadow: var(--shadow-sm);
+}
+
+.flickity-button {
+	background: var(--yellow);
+	border: var(--border-thin);
+	box-shadow: var(--shadow-sm);
+}
+
+.flickity-button:hover {
+	background: var(--orange);
+}
+
+.flickity-button-icon {
+	fill: var(--black);
+}
+
+/* ==========================================================================
+   HOME LINK (subpages)
+   ========================================================================== */
+
+.site__homelink {
+	display: flex;
+	align-items: center;
+}
+
+.site__homelink a {
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 1rem;
+	border: var(--border-thin);
+	background: var(--yellow);
+	box-shadow: var(--shadow-sm);
+	border-bottom: var(--border-thin);
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.site__homelink-brand {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: var(--font-size-small);
+	line-height: 1;
+}
+
+.site__homelink a:hover {
+	transform: translate(-2px, -2px);
+	box-shadow: var(--shadow);
+	background: var(--yellow);
+}
+
+.site__homelink svg {
+	width: 2rem;
+	height: 2rem;
+	fill: var(--black);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site__footer {
+	border-top: var(--border);
+	padding: 2.4rem var(--gutter);
+	background: var(--black);
+	color: var(--cream);
+}
+
+.footer__content {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-small);
+	font-style: italic;
+}
+
+/* ==========================================================================
+   LISTS (in project detail pages)
+   ========================================================================== */
+
+ul {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	padding-left: 2rem;
+}
+
+ul li::marker {
+	color: var(--pink);
+	font-weight: 700;
+}
+
+/* ==========================================================================
+   ICON (arrow in "show more" etc)
+   ========================================================================== */
+
+.icon {
+	vertical-align: middle;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media screen and (max-width: 767px) {
+	:root {
+		--gutter: 1.6rem;
+	}
+
+	h1 {
+		font-size: var(--font-size-large);
+	}
+
+	.post__header h1 {
+		font-size: 2.2rem;
+	}
+
+	.socials {
+		grid-template-columns: 1fr;
+	}
+
+	.site__homelink {
+		grid-column: 1;
+	}
+
+	.post__header .site__homelink + h1 {
+		font-size: 2rem;
+	}
+}
+
+/* ==========================================================================
+   FULL-WIDTH FIGURES ON LARGE SCREENS
+   ========================================================================== */
+
+@media screen and (min-width: 1200px) {
+	.carousel {
+		max-width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		margin-right: calc(-50vw + 50%);
+		padding: 0 4rem;
+	}
+}
