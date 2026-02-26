@@ -38,7 +38,7 @@ No one is going to hand you this competence. Your employer might offer training.
 
 ## Digital product design: the layer that got hit first
 
-Let's be honest about what's happening in digital product design, because this is where the disruption is most visible and most real.
+I'm trying to be honest and realistic about what's happening in digital product design, because this is where the disruption is most visible and most real.
 
 Current AI tools can generate functional user interfaces from text prompts. They can produce variations, translate designs into working code, and handle a growing share of the layout-and-pattern work that used to fill designers' and engineers' weeks. Tools like Cursor, Claude Code (with or without Figma MCP) and OpenAI Codex are not theoretical. They work, today, at a level that would have been unthinkable a few years ago.
 
