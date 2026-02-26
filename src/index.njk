@@ -9,7 +9,7 @@ title: ""
 		services, businesses, communities and teams for over 20 years.
 	</p>
 	<p>
-		Currently I'm leading design, enterprise architecture and agile transformation at <a href="https://fintraffic.fi" target="_blank">Fintraffic Railway</a>.
+		Currently I'm leading design, enterprise architecture and agile transformation at <a href="https://fintraffic.fi" target="_blank" rel="noopener noreferrer">Fintraffic Railway</a>.
 	</p>
 </div>
 <hr>
@@ -17,14 +17,8 @@ title: ""
 	<h2 class="section__title">Notes</h2>
 	<p>A growing collection of thoughts and snippets.</p>
 	<ul class="notelist">
-		{%- for note in collections.allNotes %}
-		{%- set noteDate = note.data.created or note.date %}
-		<li class="note">
-			<h3 class="note__title">
-				<a href="{{ note.url }}">{{ note.data.title }}</a>
-			</h3>
-			<p class="note__subtitle">{{ noteDate | dateFormat }} — {{ note.data.subtitle }}</p>
-		</li>
+		{%- for note in collections.notes %}
+		{% include "partials/note-list-item.njk" %}
 		{%- endfor %}
 	</ul>
 	<a href="/notes/" class="notelist__viewall">
@@ -70,7 +64,7 @@ title: ""
 				<path d="{{ social.svgPath }}" />
 			</svg>
 			<span class="social__name">{{ social.name }}:</span>
-			<a href="{{ social.url }}" target="_blank" class="social__handle">{{ social.handle }}</a>
+			<a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="social__handle">{{ social.handle }}</a>
 		</li>
 		{%- endfor %}
 	</ul>

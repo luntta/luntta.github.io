@@ -4,7 +4,9 @@
   "description": "My website",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "lint:js": "node --check .eleventy.js && node --check src/assets/js/script.js",
+    "check": "npm run lint:js && npm run build"
   },
   "repository": {
     "type": "git",

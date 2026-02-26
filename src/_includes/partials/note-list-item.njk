@@ -1,0 +1,7 @@
+{%- set noteDate = note.data.created or note.date %}
+<li class="note">
+	<h3 class="note__title">
+		<a href="{{ note.url }}">{{ note.data.title }}</a>
+	</h3>
+	<p class="note__subtitle">{{ noteDate | dateFormat }} — {{ note.data.subtitle }}</p>
+</li>

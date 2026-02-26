@@ -25,15 +25,15 @@ showBackLink: true
 {{ content | safe }}
 
 {%- set noteIndex = -1 %}
-{%- for note in collections.allNotes %}
+{%- for note in collections.notes %}
 	{%- if note.url === page.url %}
 		{%- set noteIndex = loop.index0 %}
 	{%- endif %}
 {%- endfor %}
 
 {%- if noteIndex >= 0 %}
-{%- set prevNote = collections.allNotes[noteIndex - 1] if noteIndex > 0 %}
-{%- set nextNote = collections.allNotes[noteIndex + 1] if noteIndex < collections.allNotes.length - 1 %}
+{%- set prevNote = collections.notes[noteIndex - 1] if noteIndex > 0 %}
+{%- set nextNote = collections.notes[noteIndex + 1] if noteIndex < collections.notes.length - 1 %}
 
 {%- if prevNote or nextNote %}
 <nav class="note-nav" aria-label="Note navigation">
