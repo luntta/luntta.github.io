@@ -88,7 +88,7 @@ Not every design task is meaningful. Some of what we call "craft" is really just
 
 I get it, it's uncomfortable for me as well. But I think it's also healthy to give up something once in a while.
 
-From my perspective, the design tasks that AI can automate are often the ones that bore our best people anyway. If your most talented designer is spending their days adjusting padding and producing component variants, that isn't a sign of a thriving practice, it's a sign of misallocation. Automation almost always starts where it's easiest to apply. The same is true with AI: it's exposing how much of the work isn't that meaningful anymore.
+From my perspective, the design tasks that AI can automate are often the ones that bore our best people anyway. Automation almost always starts where it's easiest to apply. The same is true with AI: it's exposing how much of the work isn't that meaningful anymore.
 
 The real question isn't "how do we protect design jobs." It's "where design actually matters, and are we organized to deliver it." If AI accelerates the production layer, that's an opportunity to align talent toward the work that makes a genuine difference. The problem-framing, the systems thinking, the organizational navigation, the strategic sense-making. The work most design teams never had enough time for because everyone was too busy pushing pixels.
 
