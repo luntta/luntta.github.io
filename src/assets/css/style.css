@@ -8,6 +8,7 @@
 	--black: #1a1a1a;
 	--white: #fffcf2;
 	--cream: #fffcf2;
+	--accent-ink: #1a1a1a;
 	--yellow: #ffe156;
 	--pink: #ff6b9d;
 	--blue: #4ecdc4;
@@ -45,37 +46,40 @@
    ========================================================================== */
 
 [data-theme="dark"] {
-	--black: #e8e6e3;
-	--white: #252525;
-	--cream: #1a1a1a;
-	--text-secondary: #999;
-	--border-secondary: #444;
-	--shadow-color: #000;
-	--yellow: #ffd633;
-	--pink: #ff5a8a;
-	--blue: #3dbdb4;
-	--orange: #ff7a4a;
-	--lavender: #b39ddb;
-	--footer-bg: #111;
-	--footer-text: #e8e6e3;
+	--black: #f2f2f2;
+	--white: #000;
+	--cream: #000000;
+	--accent-ink: #111111;
+	--text-secondary: #b5b5b5;
+	--border-secondary: #595959;
+	--shadow-color: var(--white);
+	--yellow: #ffd84d;
+	--pink: #ff7aa4;
+	--blue: #62d4cb;
+	--orange: #ff986d;
+	--lavender: #c8b5f0;
+	--footer-bg: #000000;
+	--footer-text: #f2f2f2;
+  --shadow-hover: 8px 8px 0 var(--shadow-color);
 }
 
 @media (prefers-color-scheme: dark) {
 	[data-theme="auto"],
 	:root:not([data-theme]) {
-		--black: #e8e6e3;
-		--white: #252525;
-		--cream: #1a1a1a;
-		--text-secondary: #999;
-		--border-secondary: #444;
+		--black: #f2f2f2;
+		--white: #000;
+		--cream: #000000;
+		--accent-ink: #111111;
+		--text-secondary: #b5b5b5;
+		--border-secondary: #595959;
 		--shadow-color: #000;
-		--yellow: #ffd633;
-		--pink: #ff5a8a;
-		--blue: #3dbdb4;
-		--orange: #ff7a4a;
-		--lavender: #b39ddb;
-		--footer-bg: #111;
-		--footer-text: #e8e6e3;
+		--yellow: #ffd84d;
+		--pink: #ff7aa4;
+		--blue: #62d4cb;
+		--orange: #ff986d;
+		--lavender: #c8b5f0;
+		--footer-bg: #000000;
+		--footer-text: #f2f2f2;
 	}
 }
 
@@ -107,7 +111,7 @@ body {
 
 ::selection {
 	background: var(--yellow);
-	color: var(--black);
+	color: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -154,6 +158,7 @@ p:last-child {
 
 .text-primary {
 	background: var(--yellow);
+	color: var(--accent-ink);
 	padding: 0 0.4rem;
 	display: inline;
 	box-decoration-break: clone;
@@ -171,7 +176,6 @@ a,
 	font-weight: 600;
 	border-bottom: 2px solid var(--black);
 	padding-bottom: 1px;
-	transition: background-color 0.1s ease;
 	background: none;
 	text-shadow: none;
 }
@@ -179,6 +183,8 @@ a,
 a:hover,
 .link:hover {
 	background-color: var(--yellow);
+	color: var(--accent-ink);
+	border-bottom-color: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -254,9 +260,12 @@ a:hover,
 	padding: 1rem 2rem;
 	background: var(--yellow);
 	border: var(--border);
+	color: var(--accent-ink);
+	border-color: var(--accent-ink);
 	box-shadow: var(--shadow-sm);
 	text-decoration: none;
 	border-bottom: var(--border);
+	border-bottom-color: var(--accent-ink);
 	transition: box-shadow 0.1s ease, transform 0.1s ease;
 }
 
@@ -297,6 +306,8 @@ a:hover,
 
 .note__title a:hover {
 	background: var(--yellow);
+	color: var(--accent-ink);
+	border-bottom-color: var(--accent-ink);
 }
 
 .note__subtitle {
@@ -361,8 +372,8 @@ a:hover,
 
 .note-meta__category:hover {
 	background: var(--yellow);
-	border-color: var(--black);
-	color: var(--black);
+	border-color: var(--accent-ink);
+	color: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -396,6 +407,8 @@ a:hover,
 	box-shadow: var(--shadow-hover);
 	transform: translate(-3px, -3px);
 	background: var(--white);
+  color: var(--black);
+  border-bottom-color: var(--black);
 }
 
 .note-nav__link--next {
@@ -476,6 +489,7 @@ hr {
 	padding: 0.6rem 1.2rem;
 	border: var(--border-thin);
 	background: var(--white);
+	color: var(--black);
 	box-shadow: var(--shadow-sm);
 	white-space: nowrap;
 	transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -488,18 +502,22 @@ hr {
 
 .pill:nth-child(4n+1) {
 	background: var(--yellow);
+	color: var(--accent-ink);
 }
 
 .pill:nth-child(4n+2) {
 	background: var(--blue);
+	color: var(--accent-ink);
 }
 
 .pill:nth-child(4n+3) {
 	background: var(--pink);
+	color: var(--accent-ink);
 }
 
 .pill:nth-child(4n) {
 	background: var(--lavender);
+	color: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -602,6 +620,8 @@ img {
 .flickity-button {
 	background: var(--yellow);
 	border: var(--border-thin);
+	border-color: var(--accent-ink);
+	color: var(--accent-ink);
 	box-shadow: var(--shadow-sm);
 }
 
@@ -610,7 +630,7 @@ img {
 }
 
 .flickity-button-icon {
-	fill: var(--black);
+	fill: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -628,8 +648,11 @@ img {
 	padding: 0.8rem 1rem;
 	border: var(--border-thin);
 	background: var(--yellow);
+	color: var(--accent-ink);
+	border-color: var(--accent-ink);
 	box-shadow: var(--shadow-sm);
 	border-bottom: var(--border-thin);
+	border-bottom-color: var(--accent-ink);
 	transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -649,7 +672,7 @@ img {
 .site__homelink svg {
 	width: 2rem;
 	height: 2rem;
-	fill: var(--black);
+	fill: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -671,24 +694,45 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 1.2rem;
+	flex-wrap: wrap;
 }
 
-.theme-toggle {
-	background: none;
+.theme-group {
+	display: inline-flex;
 	border: 2px solid var(--footer-text);
+}
+
+.theme-button {
+	appearance: none;
+	background: none;
+	border: 0;
+	border-right: 2px solid var(--footer-text);
 	color: var(--footer-text);
 	font-family: var(--font-mono);
 	font-size: var(--font-size-xsmall);
-	padding: 0.4rem 0.8rem;
+	font-weight: 700;
+	padding: 0.5rem 1rem;
 	cursor: pointer;
-	transition: background-color 0.1s ease;
+	transition: background-color 0.1s ease, color 0.1s ease;
 	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
-.theme-toggle:hover {
+.theme-button:last-child {
+	border-right: 0;
+}
+
+.theme-button:hover {
+	background: var(--footer-text);
+	color: var(--footer-bg);
+}
+
+.theme-button[aria-pressed="true"] {
 	background: var(--yellow);
-	color: var(--black);
-	border-color: var(--yellow);
+	color: var(--accent-ink);
+	border-color: var(--accent-ink);
 }
 
 /* ==========================================================================

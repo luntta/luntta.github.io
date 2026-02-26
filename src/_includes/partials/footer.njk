@@ -1,6 +1,10 @@
 <footer class="site__footer">
 	<div class="footer__content">
 		<span>&copy; {% year %} Raine Luntta</span>
-		<button class="theme-toggle" type="button" aria-label="Toggle theme"></button>
+		<div class="theme-group" role="group" aria-label="Theme">
+			<button class="theme-button" type="button" data-theme-option="light">Light</button>
+			<button class="theme-button" type="button" data-theme-option="dark">Dark</button>
+			<button class="theme-button" type="button" data-theme-option="auto">Auto</button>
+		</div>
 	</div>
 </footer>

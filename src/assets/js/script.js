@@ -8,28 +8,32 @@ if (header) {
 	observer.observe(header);
 }
 
-// Theme toggle
+// Theme selector
 (function () {
-	const toggle = document.querySelector(".theme-toggle");
-	if (!toggle) return;
-
-	const cycle = { auto: "light", light: "dark", dark: "auto" };
-	const icons = { auto: "\u25D1", light: "\u2600", dark: "\u263E" };
+	const buttons = Array.from(document.querySelectorAll(".theme-button"));
+	if (!buttons.length) return;
+	const validThemes = new Set(["light", "dark", "auto"]);
 
 	function current() {
-		return document.documentElement.getAttribute("data-theme") || "auto";
+		const theme = document.documentElement.getAttribute("data-theme") || "auto";
+		return validThemes.has(theme) ? theme : "auto";
 	}
 
 	function update(theme) {
 		document.documentElement.setAttribute("data-theme", theme);
-		toggle.textContent = icons[theme];
-		toggle.setAttribute("aria-label", "Theme: " + theme);
+		buttons.forEach((button) => {
+			const isActive = button.dataset.themeOption === theme;
+			button.setAttribute("aria-pressed", String(isActive));
+		});
 	}
 
-	toggle.addEventListener("click", function () {
-		var next = cycle[current()];
-		localStorage.setItem("theme", next);
-		update(next);
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const theme = button.dataset.themeOption;
+			if (!validThemes.has(theme)) return;
+			localStorage.setItem("theme", theme);
+			update(theme);
+		});
 	});
 
 	update(current());
