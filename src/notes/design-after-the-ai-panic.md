@@ -30,17 +30,17 @@ What I mean by that is understanding the technology well enough to make informed
 
 If you don't understand these things, you're designing blind. You're either under-designing, which means you're missing opportunities the technology makes possible, or over-designing, proposing stuff that will fail in ways you didn't anticipate.
 
-To put it bluntly, it's about curiosity. Designers who are genuinely curious about new tools, technologies and innovations, who experiment with them, who understand their capabilities and their limits, are probably making better design decisions. Not because they're "AI designers" or prompt engineers (which is dead too, btw), but because they understand the material they're shaping. That's what has always been expected from designers. The material just got a tad bit richer.
+For me, it's about curiosity. Designers who are genuinely curious about new tools, technologies and innovations, who experiment with them, who understand their capabilities and their limits, are probably making better design decisions. Not because they're "AI designers" or prompt engineers (which is dead too, btw), but because they understand the material they're shaping. That's what has always been expected from designers. The material just got a tad bit richer.
 
 For me exploring the unknown and getting to know new material has always been the more fun aspects of design. Solving real problems in innovative ways. The people I see actively engaging with new tools and technologies are having better time than the ones anxiously refreshing Linkedin and X to find out if their career is over. And you know what? **It's just more fun to be competent.**
 
-No one is going to hand you this competence. Your employer might offer training. Your professional community might host workshops. But the responsibility is yours, like it always has been. When internet happened, no one waited for permission to learn CSS and design web products. When mobile happened, the designers who thrived were the ones who picked up a phone and started designing for it before anyone told them to. This is no different. If you're a designer (or whatever really) in 2026 and you haven't spent serious time understanding what the new tools and technologies can and can't do, that's a choice you're making.
+No one is going to hand you this competence. Your employer might offer training. Your professional community might host workshops. But the responsibility is yours. When internet happened, no one waited for permission to learn CSS and design web products and services. When mobile happened, the designers who thrived were the ones who picked up a phone and started designing for it before anyone told them to. This is no different. If you're a designer (or whatever really) in 2026 and you haven't spent some time understanding what the new tools and technologies can and can't do, that's a choice you're making.
 
 ## Digital product design: the layer that got hit first
 
-I'm trying to be honest and realistic about what's happening in digital product design, because this is where the disruption is most visible and most real.
+I'm trying to be honest and realistic about what's happening in digital product design, because this is where the disruption is most visible and most severe.
 
-Current AI tools can generate functional user interfaces from text prompts. They can produce variations, translate designs into working code, and handle a growing share of the layout-and-pattern work that used to fill designers' and engineers' weeks. Tools like Cursor, Claude Code (with or without Figma MCP) and OpenAI Codex are not theoretical. They work, today, at a level that would have been unthinkable a few years ago.
+Current AI tools can generate functional user interfaces from text prompts. They can produce variations, translate designs into working code, and handle a growing share of the layout-and-pattern work that used to fill designers' and engineers' weeks. Tools like Cursor, Claude Code (with or without Figma MCP) and OpenAI Codex are not theoretical. They work, today, at a level that would have been unthinkable a few years ago. Take a look at this [Marey's Train Graph](https://luntta.fi/marey) I recently built with Opus 4.6. It's not just some generic bullshit form based web ui. It's a custom, niche, WebGPU UI built with just a few prompts. Would I deploy it to actual prod like that? No, but I also didn't spend more than a few minutes on it.
 
 The quality ceiling is rising fast. A year ago, AI-generated UI was total garbage. I should know, because I actually tried to leverage the tools back then. Today, with the right models, prompting and iteration, you can get output that's close to or fully production-ready. And even if you work in environments where using AI for production ready designs and code is a bit iffy (like our domain, where we're developing mission and safety-critical solutions with heavy set of regulation and standards guiding our way), AI could enable you to build concepts and PoCs, or at least prototypes, in minutes instead of hours. That leaves you with a ton of time to think, understand, explore and validate.
 
@@ -48,31 +48,31 @@ To put it plainly: if the current trend continues, a significant portion of UI w
 
 What AI can't yet do is understand the *why* behind design decisions. It can't navigate the tradeoff between onboarding simplicity and power-user efficiency when both matter and you can't have both. It doesn't know that your particular user group has low digital literacy, or that a regulatory context makes certain data collection flows non-viable, or that the previous version of this feature failed because users didn't trust the system enough to enter their information. It produces plausible interfaces based on information it has and it uses.
 
-The gap between a "interface that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. And the designers who prove it are the ones whose real skill has always been problem-solving, systems thinking, and user-centricity. The interface is just an artifact of that thinking. If your value begins and ends with the pixels, then yes, you might be in trouble.
+The gap between a "interface that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. In the end, the pixel-perfect interface design is just an artifact. If your value begins and ends with the pixels, then yes, you might be in trouble.
 
 ## Service design: where complexity is the moat
 
-Service design operates in a different territory than product design. More often it works across channels, touchpoints, organizational boundaries, and time. A service isn't just a digital product. It's an experience that unfolds itself across time, involves multiple actors, and often spans the seams between organizations or units.
+Service design operates in a different territory than product design. More often it works across channels, touchpoints, organizational boundaries, and time. A service isn't just a digital product. It's an experience that unfolds in time, involves multiple actors, and often spans the seams between organizations or units.
 
-There are "obvious" use cases for AI in service design. It can help map customer journeys from behavioral data rather than assumptions. It can help detect patterns across touchpoints that humans miss. It can synthesize large-scale user research faster than any team of analysts, at least some version of it. For the analytical side of service design, AI can be a great accelerator.
+There are "obvious" use cases for AI in service design. It can help map customer journeys from behavioral data rather than assumptions. It can help detect patterns across touchpoints that humans miss. It can synthesize large-scale customer and user research faster than any team of analysts, at least some version of it. For the analytical side of service design, AI can be a great accelerator.
 
 What AI can't do is facilitate a workshop where frontline staff, IT, legal, and management are all in the same room and they all see the service differently. Service designer's job is to navigate the politics of who owns the customer experience when the honest answer is "everyone and no one" (don't we all know that feeling). It's holding together a coherent service vision across organizational silos that have spent years optimizing for their own metrics at the expense of the whole. AI can't do organizational diplomacy. It can't read a room. It can't sense that the C-suite present in the workshop has already decided and the workshop is just a theater unless you change the dynamic in the next fifteen minutes.
 
-That work is safe, at least for now, because it's fundamentally about human coordination in contexts of competing interests and power dynamics.
+Service design, for me, is fundamentally about navigating the world of competing interests and power dynamics and balancing between the customer value and business value. It's fun when they're the one and the same, but real life is usually messier.
 
-What's more interesting is that AI is creating entirely new service design problems. When an AI agent handles a customer interaction, who designed that experience? Who's accountable when it goes wrong? When a service shifts from human-delivered to AI-mediated, the failure modes change completely. A human service agent might be slow, but they usually know when they're out of their depth. An AI agent is fast, confident, and often wrong.
+What's more interesting is that AI is creating entirely new service design opportunities and problems. When an AI agent handles a customer interaction, who designed that experience? Who's accountable when it goes wrong? When a service shifts from human-delivered to AI-mediated, the failure modes change completely. A human service agent might be slow, but they usually know when they're out of their depth. An AI agent is fast, confident, and often wrong.
 
-Service designers now need to design for a new kind of actor in the service chain. And here the material argument becomes urgent: if you don't understand how that actor works, what are its capabilities and limitations, you'll design services that break in predictable, avoidable ways.
+Service designers now need to design for a new kind of actor in the service chain. And I think here the material argument becomes pretty apparent. If you don't understand how that actor (AI) works, what are its capabilities and limitations, you'll probably end up designing services that break in predictable, avoidable ways.
 
 ## Strategic design: the layer AI can't reach yet
 
 Strategic design works on problems where the problem definition itself is contested. Organizational transformation, policy design, market entry into spaces where the rules aren't clear yet, systemic challenges that cross organizational boundaries, wicked political problems. It's design applied to situations where nobody agrees on what the question is, let alone the answer.
 
-AI can be a powerful analytical tool in this space. It can help model scenarios and horizons, synthesize weak signals from large data sets, stress-test hypotheses against evidence. A strategic designer can get real value out of AI.
+AI can be a powerful analytical tool in this space. It can help model scenarios and horizons, synthesize weak signals from large data sets, stress-test hypotheses against some set of evidence. A strategic designer can get real value out of AI today. I know I do.
 
-But strategic design doesn't happen just in spreadsheets or slide decks. It happens in rooms where power, ambiguity, and competing interests collide.
+But strategic design doesn't happen just in spreadsheets or slide decks. It happens in rooms where power, ulterior motives and competing interests collide.
 
-It means helping a leadership team reframe their understanding of a problem — which often means telling people things they don't want to hear, in ways they can actually receive. It means translating between worldviews: the engineer's, the politician's, the regulator's, the end user's. It means holding space for ambiguity long enough for a better question to emerge, when everyone in the room wants a quick answer.
+It means helping a leadership team reframe their understanding of a problem, which often means telling people things they don't want to hear, in ways they can actually receive. It means acting as a translator between worlds: the engineer's, the politician's, the regulator's, the customer's, the end user's. It means holding decisions long enough for a better question to emerge, when everyone in the room wants a quick answer.
 
 AI can help in this work, but it can't (at least yet, in my opinion) do this work. The designer's role as a translator, a provocateur, and a sense-maker in complex contexts is not something a model can perform. This work depends on human trust, timing, and the kind of social and political awareness that comes from being a person in a room with other people.
 
@@ -80,13 +80,13 @@ At this level, understanding AI becomes part of the strategic toolkit for a diff
 
 ## The uncomfortable middle
 
-I want to speak to designers, as someone who leads designers.
+I want to speak to designers, as a fellow designer and as a someone who leads designers.
 
 Some of what you're protecting isn't worth protecting.
 
-Not every design task is meaningful. Some of what we call "craft" is really just slow production. Some of what we call "process" is just a ritual that doesn't actually generate any insight. Some of our gatekeeping around who gets to make design decisions is less about quality and more about control. AI is forcing an honest discussion with which parts of design work actually create value, and which parts we defend because they are familiar and because they are ours.
+Not every design task is meaningful. Some of what we call "craft" is really just slow production. Some of what we call "process" is just a ritual that doesn't actually generate any real or new insight. Some of our gatekeeping around who gets to make design decisions is less about quality and more about control. AI is forcing an honest discussion with which parts of design work actually create value, and which parts we defend because they are familiar and because they are ours.
 
-I get it, it's uncomfortable for me as well. It should be. But it's also healthy to give up something to renew.
+I get it, it's uncomfortable for me as well. But I think it's also healthy to give up something once in a while.
 
 From my perspective the design tasks that AI can automate are often the ones that bore our best people anyway. If your most talented designer is spending their days adjusting padding and producing component variants, that isn't a sign of a thriving practice, it's a sign of misallocation. Automation almost always starts where its easiest to apply. The same is true with AI, it's exposing how much of the work isn't that meaningful anymore.
 
