@@ -7,8 +7,6 @@ categories:
   - AI
 ---
 
-# Design After the AI Panic: What I Think Changes and What Doesn't
-
 I lead design at a major Finnish company. I spend a lot of time making decisions about strategy, hiring, and the kind of design work we invest in. I've also spent my fair share of time getting to know the latest and greatest AI tools and technologies. I'm writing this because I've spent the past few days sick in bed reading (doom-scrolling) too much social media and from what I've seen, the public conversation about AI in the world of design is often split into two camps
 
 1. panic and doom
