@@ -4,16 +4,20 @@ showBackLink: true
 ---
 {%- set createdAt = created or page.date %}
 {%- set updatedAt = updated or createdAt %}
+{%- set createdIso = createdAt | isoDate %}
+{%- set updatedIso = updatedAt | isoDate %}
 <div class="note-meta">
 	<div class="note-meta__dates">
 		<span class="note-meta__date-item">
 			Created
-			<time class="note-meta__date" datetime="{{ createdAt | isoDate }}">{{ createdAt | dateFormat }}</time>
+			<time class="note-meta__date" datetime="{{ createdIso }}">{{ createdAt | dateFormat }}</time>
 		</span>
+		{%- if updatedIso != createdIso %}
 		<span class="note-meta__date-item">
 			Updated
-			<time class="note-meta__date" datetime="{{ updatedAt | isoDate }}">{{ updatedAt | dateFormat }}</time>
+			<time class="note-meta__date" datetime="{{ updatedIso }}">{{ updatedAt | dateFormat }}</time>
 		</span>
+		{%- endif %}
 	</div>
 	{%- if categories %}
 	{%- for cat in categories %}
