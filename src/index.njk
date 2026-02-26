@@ -18,11 +18,12 @@ title: ""
 	<p>A growing collection of thoughts and snippets.</p>
 	<ul class="notelist">
 		{%- for note in collections.allNotes %}
+		{%- set noteDate = note.data.created or note.date %}
 		<li class="note">
 			<h3 class="note__title">
 				<a href="{{ note.url }}">{{ note.data.title }}</a>
 			</h3>
-			<p class="note__subtitle">{{ note.date | dateFormat }} — {{ note.data.subtitle }}</p>
+			<p class="note__subtitle">{{ noteDate | dateFormat }} — {{ note.data.subtitle }}</p>
 		</li>
 		{%- endfor %}
 	</ul>
