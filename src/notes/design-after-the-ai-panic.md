@@ -46,7 +46,7 @@ To put it plainly: if the current trend continues, a significant portion of UI w
 
 What AI can't yet do is understand the *why* behind design decisions. It can't navigate the tradeoff between onboarding simplicity and power-user efficiency when both matter and you can't have both. It doesn't know that your particular user group has low digital literacy, or that a regulatory context makes certain data collection flows non-viable, or that the previous version of this feature failed because users didn't trust the system enough to enter their information. It produces plausible interfaces based on information it has and it uses.
 
-The gap between a "screen that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. And the designers who prove it are the ones whose real skill has always been problem-solving, systems thinking, and user-centricity. The interface is just an artifact of that thinking. If your value begins and ends with the pixels, then yes, you might be in trouble.
+The gap between a "interface that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. And the designers who prove it are the ones whose real skill has always been problem-solving, systems thinking, and user-centricity. The interface is just an artifact of that thinking. If your value begins and ends with the pixels, then yes, you might be in trouble.
 
 ## Service design: where complexity is the moat
 
@@ -78,17 +78,17 @@ At this level, understanding AI becomes part of the strategic toolkit for a diff
 
 ## The uncomfortable middle
 
-I want to speak directly to you as a designer, as someone who leads designers.
+I want to speak to designers, as someone who leads designers.
 
 Some of what you're protecting isn't worth protecting.
 
-Not every design task was meaningful. Some of what we called "craft" was really just slow production. Some of what we called "process" was ritual that didn't actually generate any insight. Some of our gatekeeping around who gets to make design decisions was less about quality and more about control. AI is forcing an honest reckoning with which parts of design work actually create value, and which parts we defended because they were familiar and because they were ours.
+Not every design task is meaningful. Some of what we call "craft" is really just slow production. Some of what we call "process" is just a ritual that doesn't actually generate any insight. Some of our gatekeeping around who gets to make design decisions is less about quality and more about control. AI is forcing an honest discussion with which parts of design work actually create value, and which parts we defend because they are familiar and because they are ours.
 
-I get it, it's uncomfortable, even for me. It should be. But it's also healthy to give up something to renew.
+I get it, it's uncomfortable for me as well. It should be. But it's also healthy to give up something to renew.
 
-From my perspective the design tasks that AI automates were often the ones that bored our best people anyway. If your most talented designer is spending their days adjusting padding and producing component variants, that isn't a sign of a thriving practice, it's a sign of misallocation. Automation almost always starts where its easiest to apply. The same is true with AI, it's exposing how much of the work isn't that meaningful anymore.
+From my perspective the design tasks that AI can automate are often the ones that bore our best people anyway. If your most talented designer is spending their days adjusting padding and producing component variants, that isn't a sign of a thriving practice, it's a sign of misallocation. Automation almost always starts where its easiest to apply. The same is true with AI, it's exposing how much of the work isn't that meaningful anymore.
 
-The real question isn't "how do we protect design jobs." It's "where design actually matters, and are we organized to deliver it." If AI compresses the production layer, that's an opportunity to redeploy talent toward the work that makes a genuine difference. The problem-framing, the systems thinking, the organizational navigation, the strategic sense-making. The work most design teams never had enough time for because everyone was too busy pushing pixels.
+The real question isn't "how do we protect design jobs." It's "where design actually matters, and are we organized to deliver it." If AI accelerates the production layer, that's an opportunity to align talent toward the work that makes a genuine difference. The problem-framing, the systems thinking, the organizational navigation, the strategic sense-making. The work most design teams never had enough time for because everyone was too busy pushing pixels.
 
 I can't force someone to be curious. I can't make someone spend a Saturday experimenting with a language model to understand what it's good at. I can't make someone read a technical paper about RAG because they want to know how it might change the product they're designing. That drive has to come from the individual.
 
