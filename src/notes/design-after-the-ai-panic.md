@@ -78,7 +78,7 @@ At this level, understanding AI becomes part of the strategic toolkit for a diff
 
 ## The uncomfortable middle
 
-I want to speak directly to the design community, as someone who leads designers.
+I want to speak directly to you as a designer, as someone who leads designers.
 
 Some of what you're protecting isn't worth protecting.
 
