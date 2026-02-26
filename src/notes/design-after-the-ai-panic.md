@@ -50,7 +50,7 @@ What AI can't yet do is understand the *why* behind design decisions. It can't n
 
 The gap between an "interface that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. In the end, pixel-perfect interface design is just an artifact. If your value begins and ends with the pixels, then yes, you might be in trouble.
 
-## Service design: where complexity is the moat
+## Service design: use it to your advantage
 
 Service design operates in a different territory than product design. It works across channels, touchpoints, organizational boundaries, and time. A service isn't just a digital product. It's an experience that unfolds in time, involves multiple actors, and often spans seams between organizations.
 
