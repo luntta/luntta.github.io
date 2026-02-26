@@ -2,8 +2,19 @@
 layout: layouts/base.njk
 showBackLink: true
 ---
+{%- set createdAt = created or page.date %}
+{%- set updatedAt = updated or createdAt %}
 <div class="note-meta">
-	<time class="note-meta__date" datetime="{{ page.date | isoDate }}">{{ page.date | dateFormat }}</time>
+	<div class="note-meta__dates">
+		<span class="note-meta__date-item">
+			Created
+			<time class="note-meta__date" datetime="{{ createdAt | isoDate }}">{{ createdAt | dateFormat }}</time>
+		</span>
+		<span class="note-meta__date-item">
+			Updated
+			<time class="note-meta__date" datetime="{{ updatedAt | isoDate }}">{{ updatedAt | dateFormat }}</time>
+		</span>
+	</div>
 	{%- if categories %}
 	{%- for cat in categories %}
 	<a href="/notes/category/{{ cat | slugify }}/" class="note-meta__category">#{{ cat }}</a>

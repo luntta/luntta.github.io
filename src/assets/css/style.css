@@ -322,6 +322,7 @@ a:hover,
 .note-meta {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 1.2rem;
 	font-family: var(--font-mono);
 	font-size: var(--font-size-xsmall);
@@ -329,6 +330,22 @@ a:hover,
 	letter-spacing: 0.05em;
 	color: var(--text-secondary);
 	margin-bottom: 3.2rem;
+}
+
+.note-meta__dates {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.note-meta__date-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.note-meta__date {
+	color: var(--black);
 }
 
 .note-meta__category {

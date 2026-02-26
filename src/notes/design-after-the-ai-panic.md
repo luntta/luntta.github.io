@@ -1,6 +1,8 @@
 ---
 title: "Design After the AI Panic"
 subtitle: "What I Think Changes and What Doesn't"
+created: 2026-02-26
+updated: 2026-02-26
 categories:
   - Design
   - Leadership

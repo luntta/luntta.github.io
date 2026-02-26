@@ -1,6 +1,8 @@
 ---
 title: '"Redesigning the design department"'
 subtitle: Thoughts on the McKinsey report
+created: 2026-02-11
+updated: 2026-02-12
 categories:
   - Design
   - Leadership
