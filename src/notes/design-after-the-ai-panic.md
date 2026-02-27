@@ -80,13 +80,13 @@ At this level, understanding AI becomes part of the strategic toolkit for a diff
 
 ## The uncomfortable middle
 
-I want to speak to designers, as a fellow designer and as someone who leads designers.
+If you're reading this rambling as a designer, I want to speak directly to you, as a fellow designer and as someone who leads designers.
 
-Some of what you're protecting isn't worth protecting.
+Some of what we're protecting isn't worth protecting.
 
-Not every design task is meaningful. Some of what we call "craft" is really just slow production. Some of what we call "process" is just a ritual that doesn't generate new insight. Some gatekeeping around who gets to make design decisions is less about quality and more about control. AI is forcing an honest discussion about which parts of design work actually create value, and which parts we defend because they are familiar and because they are ours.
+Not every design task is meaningful. Some of what we call "craft" is really just slow production. Some of what we call "process" is just a ritual that doesn't generate new insight or value. Some gatekeeping around who gets to make design decisions is less about quality and more about control. AI, similar to any other big tech disruptions, is forcing an honest discussion about which parts of design work actually create value, and which parts we defend because they are familiar and because they are ours.
 
-I get it, it's uncomfortable for me as well. But I think it's also healthy to give up something once in a while.
+I get it, it's uncomfortable for me as well. And I probably don't have all the right answers. But I think it's also healthy to give up something once in a while.
 
 From my perspective, the design tasks that AI can automate are often the ones that bore our best people anyway. Automation almost always starts where it's easiest to apply. The same is true with AI: it's exposing how much of the work isn't that meaningful anymore.
 
