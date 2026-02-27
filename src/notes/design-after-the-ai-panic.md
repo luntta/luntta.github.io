@@ -9,7 +9,7 @@ categories:
   - AI
 ---
 
-I lead design at a major Finnish company. I spend a lot of time making decisions about strategy, hiring, and the kind of design work we invest in. I've also spent my fair share of time getting to know the latest AI tools and technologies.
+I'm a design leader at a company that invests in and values good design. I spend a lot of time making decisions about strategy, hiring, and the kind of design work we invest in. I've also spent my fair share of time getting to know the latest AI tools and technologies.
 
 I'm writing this because I spent the past few days sick in bed doom-scrolling social media. The public conversation about AI in design seems to often be split into two camps:
 
