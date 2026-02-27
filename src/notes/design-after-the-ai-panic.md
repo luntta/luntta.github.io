@@ -16,7 +16,7 @@ I'm writing this because I spent the past few days sick in bed doom-scrolling so
 1. panic and doom
 2. denial and copium
 
-On one side, you have the doomers: design is dead and we're all redundant. On the other side, the copers: AI is just a tool and everything will be fine if we just focus on "human-centered design." Both positions are lazy and hold some truth. The reality, somewhere in between, is more interesting.
+On one side, you have the doomers: design is dead and we're all redundant. Learn to code (or don't, since that's dying too). On the other side, the copers: AI is just a tool and everything will be fine if we just focus on "human-centered design." Both positions are lazy and hold some truth. The reality, somewhere in between, is more interesting.
 
 These are my current thoughts. My opinions are subject to change, since the world around me changes constantly. I'm aware of the environmental impact of AI and the net losses these AI companies are currently running. My feelings are conflicted, but I wouldn't be doing my job if I didn't analyze the potential.
 
