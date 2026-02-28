@@ -50,6 +50,8 @@ Not all hope is lost. What AI can't yet do is understand the *why* behind design
 
 The gap between an "interface that looks good and right" and a "product that works great" is where product designers either prove their value or they don't. In the end, pixel-perfect interface design is just an artifact. If your value begins and ends with the pixels, then yes, you might be in trouble.
 
+And yes. The market will be filled to the brim with products that suck to use. Use that to your advantage, don't just dread it.
+
 ## The uncomfortable middle
 
 If you're reading this rambling as a product designer, I want to speak directly to you, as a fellow designer and as someone who leads designers.
