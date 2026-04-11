@@ -1,0 +1,34 @@
+[
+	{
+		"name": "swatch",
+		"repo": "luntta/swatch",
+		"githubUrl": "https://github.com/luntta/swatch",
+		"homepageUrl": "https://luntta.fi/swatch/",
+		"description": "A multi purpose color tool. Work in progress.",
+		"language": "JavaScript"
+	},
+	{
+		"name": "parc",
+		"repo": "luntta/parc",
+		"githubUrl": "https://github.com/luntta/parc",
+		"homepageUrl": "http://luntta.fi/parc/",
+		"description": "CLI tool for capturing, organizing, and retrieving structured fragments of thought. Brilliant when working with AI. Work in progress.",
+		"language": "Rust"
+	},
+	{
+		"name": "batchlab",
+		"repo": "luntta/batchlab",
+		"githubUrl": "https://github.com/luntta/batchlab",
+		"homepageUrl": "http://luntta.fi/batchlab/",
+		"description": "Batch editor for images leveraging WebGL.",
+		"language": "JavaScript"
+	},
+	{
+		"name": "prettycap",
+		"repo": "luntta/prettycap",
+		"githubUrl": "https://github.com/luntta/prettycap",
+		"homepageUrl": "https://prettycap.com",
+		"description": "Prettify your screenshots.",
+		"language": "JavaScript"
+	}
+]
